@@ -1,0 +1,24 @@
+{
+    "phpfmt.php_bin": "C:\\xampp\\php\\php.exe",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontSize": 16,
+    "[javascript]": {
+        "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter",
+        "editor.formatOnSave": false,
+    },
+    "[html]": {
+        "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter",
+        "editor.formatOnSave": false,
+    },
+    "git.ignoreMissingGitWarning": true,
+    "editor.formatOnSave": false,
+    // "latex-workshop.latex.tools": [{
+    //     "name": "pdfLaTeX+MakeIndex+BibTeX",
+    //     // "command": "texify",
+    //     "args": [
+    //         "--pdf",
+    //         "--tex-option= -synctex = 1",
+    //         "$fullname"
+    //     ],
+    // }],
+}
