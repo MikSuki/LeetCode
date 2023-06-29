@@ -1,3 +1,20 @@
+/**
+    問題: 
+        給一張圖，其中包含鑰匙、門鎖、無和牆
+            門鎖: 有對應的鑰匙才能開門
+            牆: 無法經過
+
+        求找到所有鑰匙的最短走法
+
+    方法:
+        BFS + 記錄走過每格時擁有的鑰匙  (和傳統BFS不同的是，可能需要重複拜訪走過的格子)
+
+        擁有的鑰匙用bitmask記錄，再根據碰到的格子處理即可。
+
+    時間:
+        O(mn + m * n * 2^k) = O(m * n * 2^k)
+ */
+
 function shortestPathAllKeys(grid: string[]): number {
     const m = grid.length, n = grid[0].length
     const visited: Set<number>[][] = new Array(m).fill(0).map(() => new Array(n).fill(0).map(() => new Set()))
