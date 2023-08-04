@@ -40,14 +40,14 @@ function wordBreak(s: string, wordDict: string[]): boolean {
     const dp: boolean[] = new Array(n).fill(false)
 
     for (let i = s.length - 1; i >= 0; --i)
-        dp[i] = has(s, i, i, dist)
+        dp[i] = has(i, dist)
 
     return dp[0]
 
-    function has(str: string, start: number, i: number, dict: Dict): boolean {
+    function has(i: number, dict: Dict): boolean {
         if (dict['end'] != undefined && (i >= n || dp[i])) return true
         if (i >= n) return false
-        if (dict[str[i]] == undefined) return false
-        return has(str, start, i + 1, dict[str[i]])
+        if (dict[s[i]] == undefined) return false
+        return has(i + 1, dict[s[i]])
     }
 };
